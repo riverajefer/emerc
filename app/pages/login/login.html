@@ -1,0 +1,28 @@
+
+<ion-content padding class="loginPage">
+
+	<img src="build/images/logo.png" class="logo">
+
+    <form (ngSubmit)="loginSubmit()">
+      <ion-item>
+      	<!-- <ion-icon name="person" item-left></ion-icon> -->
+        <ion-label floating>Nombre de Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="login.username" name="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="login.password" name="password"></ion-input>
+      </ion-item>
+
+      <button type="submit" block danger>Iniciar sesión</button>
+    </form>
+
+
+
+
+<!--     <button (click)="goToOtherPage()">
+  Go to OtherPage
+</button> -->
+
+</ion-content>
