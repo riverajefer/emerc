@@ -20,32 +20,68 @@
 	<div class="bg_titulo">
 		<p>Campaña</p>
 	</div>
+	<ion-list>
 
-	<ion-item>
-	  <ion-label>Seleccione</ion-label>
-	  <ion-select [(ngModel)]="campania">
-	    <ion-option value="1" selected="true">Estandar</ion-option>
-	    <ion-option value="2">Campaña B</ion-option>
-	    <ion-option value="2">Campaña C</ion-option>
-	  </ion-select>
-	</ion-item>
+		<ion-item>
+		  <ion-label>Seleccione</ion-label>
+		  <ion-select [(ngModel)]="campania">
+		    <ion-option value="1" selected="true">Campaña A</ion-option>
+		    <ion-option value="2">Campaña B</ion-option>
+		    <ion-option value="2">Campaña C</ion-option>
+		    <ion-option value="2">Campaña D</ion-option>
+		  </ion-select>
+		</ion-item>	
+	  <ion-item>
+	    <ion-label>Gaming</ion-label>
+	    <ion-select [(ngModel)]="gaming">
+	      <ion-option value="nes">NES</ion-option>
+	      <ion-option value="n64">Nintendo64</ion-option>
+	      <ion-option value="ps">PlayStation</ion-option>
+	      <ion-option value="genesis">Sega Genesis</ion-option>
+	      <ion-option value="saturn">Sega Saturn</ion-option>
+	      <ion-option value="snes">SNES</ion-option>
+	    </ion-select>
+	  </ion-item>	
+			
+	</ion-list>
+			
 
 	<div class="bg_titulo">
 		<p>Usuarios</p>
 	</div>
-	<ion-item>
-	  <ion-label>Seleccione</ion-label>
-	  <ion-select [(ngModel)]="gender">
-	    <ion-option value="1" selected="true">Estandar</ion-option>
-	    <ion-option value="2">Campaña B</ion-option>
-	    <ion-option value="2">Campaña C</ion-option>
-	  </ion-select>
-	</ion-item>
-<ion-grid>
-  <ion-row>
-    <ion-col width-50>This column will take 50% of space</ion-col>
-    <ion-col width-50>This column will take 50% of space</ion-col>
-  </ion-row>
-</ion-grid>	
+
+	<ion-grid class="cont_selec">
+	  <ion-row>
+
+	    <ion-col width-50 class="img_members" >
+	    	<img src="img/user.png" alt="miembros"  width="50%" >
+       </ion-col>
+
+	    <ion-col width-50 class="selec_members">
+		    <button  light full (click)="AddMember()"  [disabled]="!add" >
+		    	<ion-icon name="md-arrow-dropup"></ion-icon>
+		    </button>
+
+		    <div>
+		    	<p> {{ cantMember }} </p>
+		    </div>
+
+		    <button light full (click)="SubMember()" [disabled]="!sub">
+		    	<ion-icon name="md-arrow-dropdown"></ion-icon>
+		    </button>
+	    </ion-col>
+
+	  </ion-row>
+	</ion-grid>	
+
+	<div class="bg_titulo">
+		<p>&nbsp;</p>
+	</div>
+
+	<div align="center">
+		<button  danger class="btn_next_home">
+			Siguiente
+		</button>	
+	</div>
 
 </ion-content>

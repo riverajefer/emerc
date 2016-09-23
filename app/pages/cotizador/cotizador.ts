@@ -6,8 +6,31 @@ import { NavController, Platform } from 'ionic-angular';
 })
 export class CotizadorPage {
 
-  constructor(private navCtrl: NavController) {
+	cantMember:number;
+	add:boolean;
+	sub:boolean;
 
+  constructor(private navCtrl: NavController) {
+  	this.cantMember = 1;
+  	this.add = true;
+  	this.sub = true;
   }
 
+  AddMember(){
+  	this.cantMember++;
+  	this.sub = true;
+
+  	if(this.cantMember>4){
+  		this.add = false;
+  	}
+  }
+
+  SubMember(){
+  	this.cantMember--;
+  	this.add = true;
+
+  	if(this.cantMember < 2){
+  		this.sub = false;
+  	}
+  }
 }
