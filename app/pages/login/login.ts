@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, Page, AlertController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
+import { CotizadorPage } from '../cotizador/cotizador';
 
 
 @Component({
@@ -9,56 +10,47 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
 
-	homePage:HomePage;
-	login = {
-		username: "",
-		password: ""
-
-	};
-
+	login:{	username?: string, password?:string} = {};
+  submitted = false;
 
   constructor(private navCtrl: NavController, public alertCtrl: AlertController) {
-
-  	//this.validateLogin();
-
+        this.login = {
+          username: "rivera",
+          password: "123"
+        }; 
   }
 
 
+  loginSubmit(form){
 
+    this.submitted = true;
+    if(form.valid){
 
-  loginSubmit(){
+      if(this.login.username == "rivera" && this.login.password =="123"){
 
-  	console.log(this.login);
-  	console.log(this.login.username);
+      this.navCtrl.setRoot(HomePage, {
+        login: this.login
+      }); 
 
-  	if(this.login.username == "rivera" && this.login.password =="123"){
+      }else{
 
-		this.navCtrl.setRoot(HomePage, {
-			login: this.login
-		}); 
+        let alert = this.alertCtrl.create({
+          title: 'Error !',
+          subTitle: 'Datos de acceso incorrectos',
+          buttons: ['OK']
+        });
+        alert.present(); 
+        this.login = {
+          username: "",
+          password: ""
 
-  	}else{
+        };  
 
-  		//alert("Datos incorrectos")
-    let alert = this.alertCtrl.create({
-      title: 'Error !',
-      subTitle: 'Datos de acceso incorrectos',
-      buttons: ['OK']
-    });
-    alert.present(); 
-		this.login = {
-			username: "",
-			password: ""
+      }
 
-		};	
-
-  	}
+    }
 
   	/*Aca la idea es que valide con un servicio (Provider) el user and pw*/
-
-
-
-
 
   }
 

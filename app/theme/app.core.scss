@@ -9,3 +9,22 @@
 
 @import "../pages/home/home";
 @import "../pages/login/login";
+@import "../pages/cotizador/cotizador";
+
+$colorMenuToggle: #f80000;
+$toolbar-background: #fff;
+$azul_emer: #003D73;
+$rojo_emer: #f80000;
+.bar-button-default{
+	color: $rojo_emer;
+}
+.toolbar-background{
+	background: $toolbar-background;
+	border-bottom: 3px solid $azul_emer;
+}
+.toolbar{
+	text-align:center;
+	border-bottom: 3px solid $rojo_emer;
+	box-shadow:none;
+
+}

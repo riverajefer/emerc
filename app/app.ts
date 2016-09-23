@@ -4,7 +4,7 @@ import { StatusBar } from 'ionic-native';
 
 import { HomePage } from './pages/home/home';
 import { LoginPage } from './pages/login/login';
-
+import { CotizadorPage } from './pages/cotizador/cotizador';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -12,15 +12,9 @@ import { LoginPage } from './pages/login/login';
 export class MyApp {
   rootPage: any = LoginPage;
 
-
-
   constructor(public platform: Platform) {
   	platform.ready().then(() => {
-
   		StatusBar.styleDefault();
-
-  		
-
   	});
   }
 }

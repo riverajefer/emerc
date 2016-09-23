@@ -67,7 +67,7 @@ gulp.task('build', ['clean'], function(done){
 
 gulp.task("assets", function() {
     return gulp.src(["app/assets/images/*"])
-        .pipe(gulp.dest("www/build/images"));
+        .pipe(gulp.dest("www/img"));
 });
 
 gulp.task('sass', buildSass);

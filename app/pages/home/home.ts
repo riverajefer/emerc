@@ -3,6 +3,7 @@ import { NavController,  Platform, Nav, NavParams } from 'ionic-angular';
 
 import { SeleccionarPage } from '../seleccionar/seleccionar';
 import { AcercaPage } from '../acerca/acerca';
+import { CotizadorPage } from '../cotizador/cotizador';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { AcercaPage } from '../acerca/acerca';
 })
 export class HomePage {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = SeleccionarPage;
+  rootPage: any = CotizadorPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -20,6 +21,7 @@ export class HomePage {
     this.pages = [
       { title: 'Seleccionar', component: SeleccionarPage },
       { title: 'Acerca', component: AcercaPage },
+      { title: 'Cotizador', component: CotizadorPage },
     ];
 
     this.login = params.get("login")

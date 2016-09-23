@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>      
+        <ion-title center>
+            Cotizador
+        </ion-title>
+    <ion-buttons end>
+      <button >
+        <ion-icon name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>        
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content class="page-cotizador">
+	<h1>COTIZADOR DE FAMILIARES</h1>
+
+	<div class="bg_titulo">
+		<p>Campaña</p>
+	</div>
+
+	<ion-item>
+	  <ion-label>Seleccione</ion-label>
+	  <ion-select [(ngModel)]="campania">
+	    <ion-option value="1" selected="true">Estandar</ion-option>
+	    <ion-option value="2">Campaña B</ion-option>
+	    <ion-option value="2">Campaña C</ion-option>
+	  </ion-select>
+	</ion-item>
+
+	<div class="bg_titulo">
+		<p>Usuarios</p>
+	</div>
+	<ion-item>
+	  <ion-label>Seleccione</ion-label>
+	  <ion-select [(ngModel)]="gender">
+	    <ion-option value="1" selected="true">Estandar</ion-option>
+	    <ion-option value="2">Campaña B</ion-option>
+	    <ion-option value="2">Campaña C</ion-option>
+	  </ion-select>
+	</ion-item>
+<ion-grid>
+  <ion-row>
+    <ion-col width-50>This column will take 50% of space</ion-col>
+    <ion-col width-50>This column will take 50% of space</ion-col>
+  </ion-row>
+</ion-grid>	
+
+</ion-content>

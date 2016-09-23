@@ -1,28 +1,30 @@
-
 <ion-content padding class="loginPage">
 
-	<img src="build/images/logo.png" class="logo">
+	<img src="img/logo.png" class="logo">
 
-    <form (ngSubmit)="loginSubmit()">
-      <ion-item>
-      	<!-- <ion-icon name="person" item-left></ion-icon> -->
-        <ion-label floating>Nombre de Usuario</ion-label>
-        <ion-input type="text" [(ngModel)]="login.username" name="username"></ion-input>
-      </ion-item>
+  <p>
+    Aquí encontraras herramientas de apoyo para tu gestión comercial
+  </p>
 
-      <ion-item>
-        <ion-label floating>Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="login.password" name="password"></ion-input>
-      </ion-item>
+  <form (ngSubmit)="loginSubmit(loginForm)" #loginForm="ngForm" novalidate>
+    <ion-item>
+     <!-- <ion-icon name="person" item-left></ion-icon> -->
+     <ion-label floating>Nombre de Usuario</ion-label>
+     <ion-input type="text" [(ngModel)]="login.username" name="username" spellcheck="false" autocapitalize="off" #username="ngModel" required></ion-input>
+   </ion-item>
+   <p [hidden]="username.valid || submitted == false" danger padding-left>
+    Username is required
+  </p>
 
-      <button type="submit" block danger>Iniciar sesión</button>
-    </form>
+  <ion-item>
+    <ion-label floating>Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="login.password" name="password" #password="ngModel" required></ion-input>
+  </ion-item>
+  <p [hidden]="password.valid || submitted == false" danger padding-left>
+    Password is required
+  </p>
 
-
-
-
-<!--     <button (click)="goToOtherPage()">
-  Go to OtherPage
-</button> -->
+  <button type="submit" block danger>Iniciar sesión</button>
+ </form>
 
 </ion-content>
