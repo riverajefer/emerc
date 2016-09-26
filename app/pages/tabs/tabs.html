@@ -1,0 +1,23 @@
+<ion-header no-shadow style="margin-bottom: 30px;">
+    <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>      
+        <ion-title center>
+            <img src="img/logo_small.png" alt="">
+        </ion-title>
+    <ion-buttons end>
+      <button >
+        <ion-icon name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>        
+    </ion-navbar>
+</ion-header>
+ 
+
+
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="Crédito" tabIcon="card"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Cuenta" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Factura" tabIcon="paper"></ion-tab>
+</ion-tabs>

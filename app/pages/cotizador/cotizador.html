@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>      
         <ion-title center>
-            Cotizador
+            <img src="img/logo_small.png" alt="">
         </ion-title>
     <ion-buttons end>
       <button >
@@ -20,29 +20,19 @@
 	<div class="bg_titulo">
 		<p>Campaña</p>
 	</div>
-	<ion-list>
 
+	<ion-list>
 		<ion-item>
 		  <ion-label>Seleccione</ion-label>
-		  <ion-select [(ngModel)]="campania">
-		    <ion-option value="1" selected="true">Campaña A</ion-option>
-		    <ion-option value="2">Campaña B</ion-option>
-		    <ion-option value="2">Campaña C</ion-option>
-		    <ion-option value="2">Campaña D</ion-option>
+		  <ion-select [(ngModel)]="ModelCampania" >
+		    <ion-option *ngFor="let c of campanias" value="{{ c.id }}" >
+		    	{{ c.title }}
+		    </ion-option>
 		  </ion-select>
 		</ion-item>	
-	  <ion-item>
-	    <ion-label>Gaming</ion-label>
-	    <ion-select [(ngModel)]="gaming">
-	      <ion-option value="nes">NES</ion-option>
-	      <ion-option value="n64">Nintendo64</ion-option>
-	      <ion-option value="ps">PlayStation</ion-option>
-	      <ion-option value="genesis">Sega Genesis</ion-option>
-	      <ion-option value="saturn">Sega Saturn</ion-option>
-	      <ion-option value="snes">SNES</ion-option>
-	    </ion-select>
-	  </ion-item>	
-			
+	   <p [hidden]="validate" danger padding-left>
+	    Seleccione una campaña
+	   </p>		  
 	</ion-list>
 			
 
@@ -58,14 +48,12 @@
        </ion-col>
 
 	    <ion-col width-50 class="selec_members">
-		    <button  light full (click)="AddMember()"  [disabled]="!add" >
+		    <button  light full (click)="AddMember()" [disabled]="!add">
 		    	<ion-icon name="md-arrow-dropup"></ion-icon>
 		    </button>
-
 		    <div>
 		    	<p> {{ cantMember }} </p>
 		    </div>
-
 		    <button light full (click)="SubMember()" [disabled]="!sub">
 		    	<ion-icon name="md-arrow-dropdown"></ion-icon>
 		    </button>
@@ -79,9 +67,8 @@
 	</div>
 
 	<div align="center">
-		<button  danger class="btn_next_home">
+		<button  danger class="btn_next_home" type="submit" (click)="cotizadorSubmit()">
 			Siguiente
 		</button>	
 	</div>
-
 </ion-content>

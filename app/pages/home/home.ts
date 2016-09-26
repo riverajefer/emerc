@@ -19,9 +19,9 @@ export class HomePage {
 
   constructor(params: NavParams) {
     this.pages = [
-      { title: 'Seleccionar', component: SeleccionarPage },
-      { title: 'Acerca', component: AcercaPage },
-      { title: 'Cotizador', component: CotizadorPage },
+      { title: 'Cotizador', component: SeleccionarPage },
+      { title: 'Item 1 ', component: AcercaPage },
+      { title: 'Salir', component: CotizadorPage },
     ];
 
     this.login = params.get("login")

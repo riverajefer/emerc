@@ -10,11 +10,18 @@
 @import "../pages/home/home";
 @import "../pages/login/login";
 @import "../pages/cotizador/cotizador";
+@import "../pages/tabs/tabs";
+@import "../pages/tabcredito/tabcredito";
+@import "../pages/tabcuenta/tabcuenta";
+@import "../pages/tabfactura/tabfactura";
 
 $colorMenuToggle: #f80000;
 $toolbar-background: #fff;
 $azul_emer: #003D73;
 $rojo_emer: #f80000;
+
+$tabs-md-background: $azul_emer;
+
 .bar-button-default{
 	color: $rojo_emer;
 }
@@ -26,5 +33,8 @@ $rojo_emer: #f80000;
 	text-align:center;
 	border-bottom: 3px solid $rojo_emer;
 	box-shadow:none;
-
 }
+
+
+$tabs-md-tab-color-active: #000;
+$tabs-ios-tab-color-active: #000;

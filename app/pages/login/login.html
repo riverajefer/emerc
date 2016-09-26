@@ -13,7 +13,7 @@
      <ion-input type="text" [(ngModel)]="login.username" name="username" spellcheck="false" autocapitalize="off" #username="ngModel" required></ion-input>
    </ion-item>
    <p [hidden]="username.valid || submitted == false" danger padding-left>
-    Username is required
+    Nombre de usuario requerido
   </p>
 
   <ion-item>
@@ -21,10 +21,11 @@
     <ion-input type="password" [(ngModel)]="login.password" name="password" #password="ngModel" required></ion-input>
   </ion-item>
   <p [hidden]="password.valid || submitted == false" danger padding-left>
-    Password is required
+    Password requerido
   </p>
 
   <button type="submit" block danger>Iniciar sesión</button>
+  
  </form>
 
 </ion-content>

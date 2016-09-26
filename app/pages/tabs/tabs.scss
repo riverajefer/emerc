@@ -1,0 +1,11 @@
+.tabs {
+
+}
+
+$tabs-md-background: #003D73;
+.tab-button[aria-selected=true] {
+    padding: 6px 0 10px 0;
+    font-size: 1.4rem;
+    color: #FFF;
+    background:#003D73;
+}
