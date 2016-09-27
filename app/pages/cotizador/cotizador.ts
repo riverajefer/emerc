@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 
-import { TabsPage } from '../tabs/tabs';
+//import { TabsPage } from '../tabs/tabs';
+import { SlidesPage } from '../slides/slides';
 
 
 @Component({
@@ -52,7 +53,7 @@ export class CotizadorPage {
   cotizadorSubmit(){
   	console.log("miembros", this.cantMember);
   	console.log("campaña", this.ModelCampania);
-  	this.navCtrl.push(TabsPage);
+  	this.navCtrl.push(SlidesPage);
   }
 
 }
